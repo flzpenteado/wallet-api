@@ -2,15 +2,16 @@ package com.wallet.dto;
 
 
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
 
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.Length;
 
 @Data
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class UserDto {
 
     private Long id;
